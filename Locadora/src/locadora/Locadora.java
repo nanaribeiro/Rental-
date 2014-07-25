@@ -19,8 +19,8 @@ public class Locadora {
      */
     public static void main(String[] args) {
         Conexao.geConexao();
-        Login user=new Login();
-        user.login();
+        Principal roda=new Principal();
+        roda.layout();
         // TODO code application logic here
     }
     
