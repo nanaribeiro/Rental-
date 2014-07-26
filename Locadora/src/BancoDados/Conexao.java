@@ -11,14 +11,14 @@ import java.sql.*;
  * @author alana.sasse
  */
 public class Conexao {
-    public static Connection geConexao(){
+    public static Connection getConexao(){
         try{
              // Carregando o JDBC Driver padrão  
             String driverName = "com.mysql.jdbc.Driver";
             Class.forName(driverName);
             // Configurando a nossa conexão com um banco de dados//  
             String serverName = "localhost";    //caminho do servidor do BD  
-            String mydatabase ="test";        //nome do seu banco de dados  
+            String mydatabase ="locadora";        //nome do seu banco de dados  
             String url = "jdbc:mysql://" + serverName + "/" + mydatabase;  
             String username = "root";        //nome de um usuário de seu BD        
             String password = "try321";      //sua senha de acesso  
