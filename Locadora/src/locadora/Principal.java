@@ -88,7 +88,7 @@ public class Principal implements ActionListener {
         
         //Listeners dos controles
         sair.addActionListener(this);
-        frmPrincipal.addWindowListener((WindowListener) this);
+        
     }
     
 
