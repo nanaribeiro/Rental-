@@ -23,7 +23,7 @@ import javax.swing.*;
  * @author alana.sasse
  */
 public class Login implements ActionListener{
-<<<<<<< HEAD
+
     JDialog frmLogin=new JDialog();
     String sql;
     String strAux;
@@ -47,24 +47,7 @@ public class Login implements ActionListener{
         frmLogin.getContentPane().add(cmdLogin);
         frmLogin.setUndecorated(true);
         frmLogin.setVisible(true);
-=======
-    
-    JInternalFrame frmLogin=new JInternalFrame();
-    
-    JButton cmdLogin = new JButton("Login");
-    JLabel label = new JLabel(frmLogin.getTitle(), JLabel.CENTER);
-    void LayoutLogin() {
-        cmdLogin.addActionListener((ActionListener) this);
-        frmLogin.setBounds(25,25,300,300);
-        
-        frmLogin.add(label, BorderLayout.CENTER);
-        frmLogin.getContentPane().add(cmdLogin);
-        
-        frmLogin.setVisible(true);
-        
-        
->>>>>>> 262e971b915cf147fe2c0bdd478d3d7078bcb967
-        
+      
       
     }
     @Override
@@ -91,7 +74,7 @@ public class Login implements ActionListener{
                             test=true;
                             Principal unlock=new Principal();
                             //unlock.frmPrincipal.setEnabled(true);
-                            unlock.layout(true);
+                            unlock.layout();
                             
                     }
                         else{

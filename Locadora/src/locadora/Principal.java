@@ -15,62 +15,32 @@ import javax.swing.*;
  *
  * @author alana.sasse
  */
-<<<<<<< HEAD
-public class Principal implements ActionListener  {
-    //Janela Principal
-    JFrame frmPrincipal=new JFrame("Locadora");
-    
-    
-=======
+
+   
+   
 public class Principal implements ActionListener {
     //Janela Principal
     JFrame frmPrincipal=new JFrame("Locadora");
     
     JDesktopPane jdpDesktop=new JDesktopPane();
->>>>>>> 262e971b915cf147fe2c0bdd478d3d7078bcb967
     //Barra de menu
     JMenuBar bmnuPrincipal= new JMenuBar();
     //Conjunto dos menus da barra de menu
-    JMenu mnuPrincipal;
-<<<<<<< HEAD
+    JMenu mnuPrincipal, mnuSub;
     //Itens de cada menu
     JMenuItem sair,porcliente,porfilme;
-    JMenuItem cliente,locacao;
-    JMenuItem filme;
+    JMenuItem cliente,locacao, permissoes;
+    JMenuItem filme, login;
     
-    //Objeto Login
-    Login log=new Login();
     //Desenha o layout principal
-    void layout(boolean blnLock){
-        
-        //Cria um objeto do tipo JMenu e atribui o nome Geral
-        mnuPrincipal=new JMenu("Geral");
-        mnuPrincipal.setEnabled(blnLock);
-        bmnuPrincipal.add(mnuPrincipal);  
-        
-        cliente = new JMenuItem("Cadastro de Clientes");
-	mnuPrincipal.add(cliente); // adiciona cliente no mnuPrincipal 
-        
-	filme = new JMenuItem("Cadastro de Filmes");
-	mnuPrincipal.add(filme); // adiciona filme a mnuPrincipal  
-        
-        //PESQUISAR
-        mnuPrincipal = new JMenu("Pesquisar"); //add mnuPrincipal pesquisar
-        mnuPrincipal.setEnabled(blnLock);
-=======
-    JMenu mnuSub;
-    //Itens de cada menu
-    JMenuItem sair,porcliente,porfilme;
-    JMenuItem cliente,locacao, permissoes, login;
-    JMenuItem filme;
-    //Objeto Login
-    Login log=new Login();
-    
-    //Cria o layout principal
     void layout(){
+        
         //Cria um objeto do tipo JMenu e atribui o nome Geral
         mnuPrincipal=new JMenu("Geral");
         bmnuPrincipal.add(mnuPrincipal);  
+
+        //Cria um objeto do tipo JMenu e atribui o nome Geral
+  
         //submenu
         mnuSub = new JMenu("Cadastro");
         filme = new JMenuItem("Filmes");
@@ -86,7 +56,6 @@ public class Principal implements ActionListener {
         
         //PESQUISAR
         mnuPrincipal = new JMenu("Pesquisar"); //add mnuPrincipal pesquisar
->>>>>>> 262e971b915cf147fe2c0bdd478d3d7078bcb967
         bmnuPrincipal.add(mnuPrincipal); //add mnuPrincipal a barra
         
 	porcliente = new JMenuItem("Por cliente"); //add item
@@ -96,21 +65,13 @@ public class Principal implements ActionListener {
         mnuPrincipal.add(porfilme);     //add ao mnuPrincipal 
         
         //NOVA LOCAÇÃO
-<<<<<<< HEAD
-        mnuPrincipal = new JMenu("Nova Locação"); // add mnuPrincipal Sair  
-        mnuPrincipal.setEnabled(blnLock);
-=======
+
         mnuPrincipal = new JMenu("Nova Locação"); // add mnuPrincipal Sair
->>>>>>> 262e971b915cf147fe2c0bdd478d3d7078bcb967
         bmnuPrincipal.add(mnuPrincipal); // adiciona mnuPrincipal a barra
 
-        locacao = new JMenuItem("Cliente"); // add novo item no mnuPrincipal
-        mnuPrincipal.add(locacao); //add intem 
 
         //SAIR
-<<<<<<< HEAD
         sair = new JMenuItem("Sair");  
-        sair.setEnabled(blnLock);
         bmnuPrincipal.add(sair);
         
                 
@@ -118,53 +79,25 @@ public class Principal implements ActionListener {
         
         
         //Adiciona o menu à tela prinipal
-        bmnuPrincipal.setEnabled(blnLock);
         frmPrincipal.add(bmnuPrincipal, BorderLayout.NORTH);
         
         frmPrincipal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//Faz com que ao clicar no 'X' saia do programa
-        
-        
-        //frmPrincipal.add(log.jdpDesktop, BorderLayout.CENTER);
-=======
-        sair = new JMenuItem("Sair");
-        bmnuPrincipal.add(sair);
-        
-        
-        //Adiciona o menu à tela prinipal
-        frmPrincipal.add(bmnuPrincipal, BorderLayout.NORTH);
-        log.LayoutLogin();//Monta o layout da tela de login
-        frmPrincipal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//Faz com que ao clicar no 'X' saia do programa
-        jdpDesktop.add(log.frmLogin);
-        frmPrincipal.add(jdpDesktop, BorderLayout.CENTER);
->>>>>>> 262e971b915cf147fe2c0bdd478d3d7078bcb967
+
         frmPrincipal.setExtendedState(MAXIMIZED_BOTH);//Faz com que a tela apareca maximizada ao inicializar
         frmPrincipal.setVisible(true);
         
         //Listeners dos controles
         sair.addActionListener(this);
-<<<<<<< HEAD
         frmPrincipal.addWindowListener((WindowListener) this);
     }
-    public void test(Boolean blnLock){
-        frmPrincipal.setEnabled(blnLock);
-    }
     
-=======
-    }
 
->>>>>>> 262e971b915cf147fe2c0bdd478d3d7078bcb967
     @Override
     //Ação dos controles
     public void actionPerformed(ActionEvent event) {
         if (event.getSource() == sair){
-<<<<<<< HEAD
             System.exit(JFrame.DO_NOTHING_ON_CLOSE);
 	        	 }   
     }
-    
-=======
-            System.exit(JFrame.EXIT_ON_CLOSE);
-	        	 }   
-    }
->>>>>>> 262e971b915cf147fe2c0bdd478d3d7078bcb967
+
 }
