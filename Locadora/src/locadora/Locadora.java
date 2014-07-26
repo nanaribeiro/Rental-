@@ -6,7 +6,7 @@
 
 package locadora;
 
-import BancoDados.Conexao;
+
 
 /**
  *
@@ -17,11 +17,13 @@ public class Locadora {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        Conexao.geConexao();
-        Login user=new Login();
-        user.login();
-        // TODO code application logic here
+
+    public static void main(String[] args){
+        Principal roda=new Principal();
+        Login login=new Login();
+        login.LayoutLogin();
+        
+
     }
     
 }
