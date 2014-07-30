@@ -25,6 +25,10 @@ public class InteracaoDAO {
         ResultSet RS=statement.executeQuery(sql);
         return RS;
     }
+    public void Query(String sql)throws SQLException{
+        statement = connection.createStatement();
+        statement.executeUpdate(sql);
+    }
     public void close() throws SQLException{
         connection.close();
     }
