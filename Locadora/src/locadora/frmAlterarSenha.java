@@ -1,7 +1,9 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+Criação: Alana Ribeiro      Data: 30/07/2014
+
+Propósito: Alterar a senha de login de modo rápido e prático.
+  
+
  */
 
 package locadora;
