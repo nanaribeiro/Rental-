@@ -27,8 +27,9 @@ public class Locadora {
         op.Setroot();
         Principal roda=new Principal();
         Login login=new Login();
+        login.setLogin(true);
         login.LayoutLogin();
-        
+        roda.layout();
 
     }
     
